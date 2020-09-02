@@ -1,0 +1,27 @@
+.icon-remove,
+.icon-check {
+  display: none;
+}
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(27, 27, 27);
+}
+
+.input:focus {
+  border: rgb(7, 126, 238) 1px solid;
+}
+.fa-check {
+  color: rgb(26, 238, 7);
+}
+.fa-times {
+  color: rgb(255, 67, 67);
+}
+
+.input.success {
+  border: rgb(26, 238, 7) 1px solid;
+}
+.input.invalid {
+  border: rgb(255, 67, 67) 1px solid;
+}

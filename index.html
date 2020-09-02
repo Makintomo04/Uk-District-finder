@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="hero hero-body is-dark container mt-5">
+        <h1 class="title has-text-white">
+          UK Postcode District Location Finder
+        </h1>
+        <h2 class="subtitle has-text-light">
+          Enter postcode district to get location information.
+        </h2>
+        <form action="#" id="zipForm">
+          <div class="field">
+            <p class="control has-icons-left has-icons-right">
+              <input
+                id="input-field"
+                class="input is-medium"
+                type="text"
+                placeholder="Example, 'UB8'"
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              <span class="icon is-small is-right icon-check">
+                <i class="fas fa-check"></i>
+              </span>
+              <span class="icon is-small is-right icon-remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control">
+              <button class="button is-success has-background-info mt-3">
+                Search
+              </button>
+            </p>
+          </div>
+          <div id="results"></div>
+        </form>
+      </div>
+    </section>
+
+    <br />
+    <div class="container is-dark">
+      <div id="output"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
