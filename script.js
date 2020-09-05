@@ -3,15 +3,17 @@ const input = document.querySelector("#input-field");
 const outputCards = document.querySelector("#output");
 const results = document.querySelector("#results");
 var counter = 0;
+form.addEventListener("submit", getLocationInfo);
 
-form.addEventListener("submit", (e) => {
+function getLocationInfo(e) {
   const inputVal = input.value;
 
   fetch(`https://api.zippopotam.us/GB/${inputVal}`)
     .then((response) => {
+      console.log(response);
       if (response.status != 200) {
         document.querySelector(`#output`).innerHTML = `
-        <article class="message is-danger"><div class=" message-body">Invalid postcode, please try again</div></article
+        <article class="message is-danger"><div class="message-body">Invalid postcode, please try again</div></article
         `;
         showIcon("remove");
         input.classList.remove("success");
@@ -49,8 +51,8 @@ form.addEventListener("submit", (e) => {
     })
     .catch((err) => console.log(err));
 
-  e.preventDefault;
-});
+  e.preventDefault();
+}
 
 function showIcon(icon) {
   document.querySelector(".icon-remove").style.display = "none";
