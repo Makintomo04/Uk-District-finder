@@ -7,7 +7,7 @@ var counter = 0;
 form.addEventListener("submit", (e) => {
   const inputVal = input.value;
 
-  fetch(`http://api.zippopotam.us/GB/${inputVal}`)
+  fetch(`https://api.zippopotam.us/GB/${inputVal}`)
     .then((response) => {
       if (response.status != 200) {
         document.querySelector(`#output`).innerHTML = `
